@@ -1,0 +1,6 @@
+recipe_env
+__pycache__
+.DS_Store
+app.db
+migrations
+.env 

@@ -1,0 +1,93 @@
+/* Nav Styles */
+.ct-nav{
+    display: flex;
+    justify-content: center
+}
+
+/* Main Logo Image */
+.ct-nav img{
+    width: 30%;
+    max-width: 100%;
+    margin-left: 5vw
+}
+
+ul#horizontal-list{
+    min-width: 75vw;
+    list-style-type: none;
+    padding-top: 2vw;
+}
+
+#horizontal-list li, #horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: 0.5vw;
+    color:black
+}
+
+/* End of Nav Styles */
+
+/* Start of Header Section */
+
+#header-text{
+    padding: 2vw;
+}
+
+.header-image{
+    width: 75%;
+    max-width: 100%;
+}
+/* End of Header Section */
+
+/* Start of Middle Section */
+
+#middle-text{
+    text-align: center;
+    padding: 10vh;
+}
+
+#middle-text h2{
+    padding: 1.5vw;
+}
+
+/* End of Middle Section */
+
+/* Start of Features Section */
+
+#reci-image, #condi-image, #cookware-image{
+    width: 70%;
+    display: block;
+    margin: auto;
+    margin-bottom: 10vh;
+}
+
+#features-section{
+    margin: 8vw;
+}
+
+/* End of Features Section */
+
+/* Start of Community Section */
+#undraw-image{
+    width: 50%;
+    max-width: 75%;
+    margin-left: 3vw;
+}
+
+/* End of Community Section */
+
+/* Start of Footer Section */
+.footer-text-flex{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3vw;
+}
+
+#footer-logo{
+    width: 100%;
+    max-width: 100%;
+}
+
+#footer{
+    border-top: 3px solid black;
+    margin-top: 20vh
+}
