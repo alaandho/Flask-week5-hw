@@ -1,40 +1,54 @@
 /* Nav Styles */
 .ct-nav{
     display: flex;
-    justify-content: center
+    justify-content: space-between;
+    
+}
+
+.left {
+    padding-left: 30rem;
 }
 
 /* Main Logo Image */
 .ct-nav img{
-    width: 30%;
+    width: 80%;
     max-width: 100%;
-    margin-left: 5vw
+    margin-left: 5vw;
+    margin-right: 40px;
 }
 
 ul#horizontal-list{
     min-width: 75vw;
     list-style-type: none;
     padding-top: 2vw;
+    margin-left: 45px;
 }
 
 #horizontal-list li, #horizontal-list a{
     display: inline;
     text-decoration: none;
     padding: 0.5vw;
-    color:black
+    color:black;
 }
+
+/* #horizontal-list a:nth-last-child(1){   
+    border: 2px solid goldenrod;
+    border-radius: 11px;
+    margin-right: 0.2vw; */
+    
 
 /* End of Nav Styles */
 
 /* Start of Header Section */
 
 #header-text{
-    padding: 2vw;
+    padding: 7vw;
 }
 
 .header-image{
     width: 75%;
     max-width: 100%;
+    padding-left: 1vw;
 }
 /* End of Header Section */
 
@@ -53,6 +67,10 @@ ul#horizontal-list{
 
 /* Start of Features Section */
 
+/* #condi-image{
+    margin-bottom: 2vh
+} */
+
 #reci-image, #condi-image, #cookware-image{
     width: 70%;
     display: block;
@@ -62,6 +80,7 @@ ul#horizontal-list{
 
 #features-section{
     margin: 8vw;
+    text-align: center;
 }
 
 /* End of Features Section */
@@ -83,11 +102,13 @@ ul#horizontal-list{
 }
 
 #footer-logo{
-    width: 100%;
+    width: 60%;
     max-width: 100%;
 }
 
 #footer{
     border-top: 3px solid black;
-    margin-top: 20vh
+    margin-top: 20vh;
+    margin: center;
+
 }
