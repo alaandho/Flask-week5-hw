@@ -2,6 +2,7 @@
 .ct-nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -20,8 +21,8 @@
 ul#horizontal-list{
     min-width: 75vw;
     list-style-type: none;
-    padding-top: 2vw;
     margin-left: 45px;
+    margin-bottom: 0;
 }
 
 #horizontal-list li, #horizontal-list a{
@@ -31,11 +32,11 @@ ul#horizontal-list{
     color:black;
 }
 
-/* #horizontal-list a:nth-last-child(1){   
+#horizontal-list a:nth-last-child(1){   
     border: 2px solid goldenrod;
     border-radius: 11px;
-    margin-right: 0.2vw; */
-    
+    margin-right: 0.2vw;
+}    
 
 /* End of Nav Styles */
 
