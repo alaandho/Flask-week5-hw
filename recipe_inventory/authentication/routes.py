@@ -54,3 +54,11 @@ def signin():
 def logout():
     logout_user()
     return redirect(url_for('site.home'))
+
+
+def login_required(current_user):
+    def logout():
+        logout_user()
+        return redirect(url_for('site.home'))
+    if current_user.is_authenticated:
+        return logout()
