@@ -1,17 +1,16 @@
 from functools import wraps
 import secrets
 
-from flask import json, request, jsonify
+from flask import request, jsonify
 
 from recipe_inventory.models import User, Recipe
 
 def token_required(our_flask_function):
     @wraps(our_flask_function)
-    def decorated(*args, **kwargs):   #** means key word argument 
+    def decorated(*args, **kwargs):
         token = None
-
         if 'x-access-token' in request.headers:
-            token = request.headers['x-access-token'].split(" ")[1]
+            token = request.headers['x-access-token'].split()[1]
         if not token:
             return jsonify({'message': 'Token is missing!'}), 401
 
