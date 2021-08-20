@@ -52,24 +52,20 @@ class Recipe(db.Model):
     id = db.Column(db.String, primary_key = True)
     name = db.Column(db.String(150))
     description = db.Column(db.String(300))
-    prep_time = db.Column(db.String(100))
     cook_time = db.Column(db.String(100))
-    meat = db.Column(db.String(50))
+    meat_or_veg = db.Column(db.String(50))
     garnishes = db.Column(db.String(300))
     spices = db.Column(db.String(300))
-    broth = db.Column(db.String(300))
     user_token = db.Column(db.String, db.ForeignKey('user.token'), nullable = False)
 
-    def __init__(self, name, description, prep_time, cook_time, meat, garnishes, spices, broth, user_token, id = ''):
+    def __init__(self, name, description, cook_time, meat_or_veg, garnishes, spices, user_token, id = ''):
         self.id = self.set_id()
         self.name = name
         self.description = description
-        self.prep_time = prep_time
         self.cook_time = cook_time
-        self.meat = meat
+        self.meat_or_veg = meat_or_veg
         self.garnishes = garnishes
         self.spices = spices
-        self.broth = broth
         self.user_token = user_token
 
     def set_id(self):
@@ -78,7 +74,7 @@ class Recipe(db.Model):
 
 class RecipeSchema(ma.Schema):
     class Meta:
-        fields = ['id', 'name', 'description', 'prep_time', 'cook_time', 'meat', 'garnishes', 'spices', 'broth']
+        fields = ['id', 'name', 'description', 'cook_time', 'meat_or_veg', 'garnishes', 'spices']
 
 
 recipe_schema = RecipeSchema()
