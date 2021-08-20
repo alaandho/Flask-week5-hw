@@ -16,17 +16,15 @@ def getdata():
 def create_recipe(current_user_token):
     name = request.json['name']
     description = request.json['description']
-    prep_time = request.json['prep_time']
     cook_time = request.json['cook_time']
-    meat = request.json['meat']
+    meat_or_veg = request.json['meat_or_veg']
     garnishes = request.json['garnishes']
     spices = request.json['spices']
-    broth = request.json['broth']
     user_token = current_user_token.token
 
     print(f'TESTER: {current_user_token.token}')
 
-    recipe = Recipe(name, description, prep_time, cook_time, meat, garnishes, spices, broth, user_token = user_token)
+    recipe = Recipe(name, description, cook_time, meat_or_veg, garnishes, spices, user_token = user_token)
 
     db.session.add(recipe)
     db.session.commit()
@@ -61,12 +59,10 @@ def update_recipe(current_user_token, id):
     if recipe:
         recipe.name = request.json['name']
         recipe.description = request.json['description']
-        recipe.prep_time = request.json['prep_time']
         recipe.cook_time = request.json['cook_time']
-        recipe.meat = request.json['meat']
+        recipe.meat_or_veg = request.json['meat_or_veg']
         recipe.garnishes = request.json['garnishes']
         recipe.spices = request.json['spices']
-        recipe.broth = request.json['broth']
         recipe.user_token = current_user_token.token
         db.session.commit()
 
