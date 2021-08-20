@@ -18,9 +18,9 @@ def token_required(our_flask_function):
             current_user_token = User.query.filter_by(token = token).first()
             print(token)
         except:
-            owner = User.query.filter_by(token = token).first()
+            current_user_token = User.query.filter_by(token = token).first()
 
-            if token != owner.token and secrets.compare_digest(token, owner.token):
+            if token != current_user_token.token and secrets.compare_digest(token, current_user_token.token):
                 return jsonify({'message': 'Invalid Token try again'})
         return our_flask_function(current_user_token, *args, **kwargs)
     return decorated 
